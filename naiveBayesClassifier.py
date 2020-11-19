@@ -94,12 +94,12 @@ if __name__ == "__main__":
     # Saving trained model using pickle library
 
 
-    # print("Accuracy is:", classify.accuracy(classifier, test_data))
-    #
-    # print(classifier.show_most_informative_features(10))
-    #
-    # custom_tweet = "I love this app! Keep up the good work :)"
-    #
-    # custom_tokens = remove_noise(word_tokenize(custom_tweet))
-    #
-    # print(custom_tweet, classifier.classify(dict([token, True] for token in custom_tokens)))
+    print("Accuracy is:", classify.accuracy(classifier, test_data))
+
+    print(classifier.show_most_informative_features(10))
+
+    custom_tweet = "I love this app! Keep up the good work :)"
+
+    custom_tokens = remove_noise(word_tokenize(custom_tweet))
+
+    print(custom_tweet, classifier.classify(dict([token, True] for token in custom_tokens)))

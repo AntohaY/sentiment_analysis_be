@@ -2,8 +2,9 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 import pickle
-from analysis import remove_noise
+from naiveBayesClassifier import remove_noise
 from nltk.tokenize import word_tokenize
+from flask import jsonify
 
 
 def classify(message):
@@ -29,7 +30,9 @@ CORS(app)
 
 @app.route("/classify", methods=['GET'])
 def get_classify():
-    return classify(request.args.get('message'))
+    return jsonify(
+        result=classify(request.args.get('message'))
+    )
 
 
 if __name__ == "__main__":
