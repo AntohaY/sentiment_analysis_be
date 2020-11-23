@@ -8,6 +8,7 @@ from nltk.tokenize import word_tokenize
 from flask import jsonify
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
 
 def classify(message):
     f = open('sentiment_classifier', 'rb')
