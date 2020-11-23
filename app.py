@@ -7,6 +7,7 @@ from naiveBayesClassifier import remove_noise
 from nltk.tokenize import word_tokenize
 from flask import jsonify
 nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 def classify(message):
     f = open('sentiment_classifier', 'rb')
