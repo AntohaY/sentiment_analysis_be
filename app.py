@@ -1,3 +1,4 @@
+import nltk
 from flask import Flask
 from flask import request
 from flask_cors import CORS
@@ -5,6 +6,8 @@ import pickle
 from naiveBayesClassifier import remove_noise
 from nltk.tokenize import word_tokenize
 from flask import jsonify
+nltk.download('punkt')
+nltk.download()
 
 
 def classify(message):
