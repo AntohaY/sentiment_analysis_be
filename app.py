@@ -38,3 +38,7 @@ def get_classify():
 @app.route('/')
 def index():
     return "<h1>Welcome to my server</h1>"
+
+
+if __name__ == "__main__":
+    app.run(threaded=True)
